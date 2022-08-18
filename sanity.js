@@ -16,7 +16,7 @@ export const config = {
    * data always (potentially slightly slower and a bit more expensive).
    * Authenticated request (like preview) will always bypass the CDN
    **/
-  // useCdn: process.env.NODE_ENV === "production",
+  useCdn: process.env.NODE_ENV === "production",
 };
 export const sanityClient = createClient(config);
 export const urlFor = (source) => createImageUrlBuilder(config).image(source);

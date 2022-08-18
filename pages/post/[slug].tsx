@@ -63,7 +63,6 @@ function Post({ post }: Props) {
         </div>
         <div className="mt-10">
           <PortableText
-            className=""
             content={post.body}
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
@@ -207,7 +206,7 @@ export const getStaticProps = async ({ params }: { params: any }) => {
         description,
         mainImage,
         slug,
-        body,
+        body[],
         _createdAt
         }`;
   const post = await sanityClient.fetch(query, {
