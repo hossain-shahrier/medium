@@ -65,7 +65,7 @@ function Post({ post }: Props) {
           <PortableText
             content={post.body}
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
-            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
+            projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "jkumaq45"}
             serializers={{
               h1: (props: any) => (
                 <h1 {...props} className="text-2xl font-bold my-5" />
