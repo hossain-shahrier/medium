@@ -80,6 +80,7 @@ function Post({ post }: Props) {
                 </a>
               ),
             }}
+            key={post._id}
           />
         </div>
       </article>
@@ -206,7 +207,7 @@ export const getStaticProps = async ({ params }: { params: any }) => {
         description,
         mainImage,
         slug,
-        body[],
+        body,
         _createdAt
         }`;
   const post = await sanityClient.fetch(query, {
